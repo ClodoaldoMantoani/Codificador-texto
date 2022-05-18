@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./files/alura-logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Criptografia de Texto</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <h1><img src="./imagens/logo.svg" alt="logo_da_alura"></h1>
+        <ul class="menu">
+            <li><a
+                    href="https://www.alura.com.br/challenges/oracle-one/semana01e02-construa-decodificador-texto-com-javascript">Sobre</a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <div class="link__container">
+            <a class="link__img" href="https://pt-br.facebook.com/"
+                aria-label="Direcionar para página de loguin facebook"> <img class="img__link"
+                    src="./imagens/facebook.png" alt="Link facebook"> </a>
+            <a class="link__img" href="https://www.linkedin.com/login/pt"
+                aria-label="Direcionar para página de loguin linkedin"> <img class="img__link"
+                    src="./imagens/linkedin.png" alt="Link linkedin"> </a>
+            <a class="link__img" href="https://web.whatsapp.com/"
+                aria-label="Direcionar para página de loguin whatsapp"> <img class="img__link"
+                    src="./imagens/watsap.png" alt="Link Whatsapp"> </a>
+            <a class="link__img" href="https://outlook.live.com/" aria-label="Direcionar para página de loguin e-mail">
+                <img class="img__link" src="./imagens/Outlook.png" alt="Link outlook"> </a>
+            <a class="link__img" href="https://github.com/LogIN-" aria-label="Direcionar para página de loguin github">
+                <img class="img__link" src="./imagens/git.png" alt="Link outlook"> </a>
+        </div>
+    </main>
+
+    <main class="container">
+        <form class="text-input-section">
+            <textarea placeholder="Digite seu Texto" id="inputText" autofocus></textarea>
+            <div class="info">
+                <img src="./imagens/icone_exclamacao.svg" alt="" />
+                <span>Apenas letras minúsculas sem acento.</span>
+            </div>
+            <div>
+                <button type="button" onclick="Cryptography()">Criptografar</button>
+                <button type="button" onclick="Decrypt()">Descriptografar</button>
+            </div>
+        </form>
+
+        <aside>
+            <form class="text-output-section">
+                <div id="emptyMessage" class="showsEmptyMessage">
+                    <canvas id="canvas"></canvas>
+                    <img src="./imagens/illus.svg" alt="Ilustração de um texto vazio">
+                    <h3>Nenhuma mensagem encontrada</h3>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <textarea id="showMessage" placeholder="" disabled readonly></textarea>
+                <button type="button" class="btnHiddenCopy" id="btnCopy" onclick="Copy()">Copiar</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2022 - by <a href="https://github.com/ClodoaldoMantoani">Clodoaldo Mantoani</a>.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
